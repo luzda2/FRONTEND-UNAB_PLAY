@@ -23,6 +23,7 @@ app.component("registrar-partidos",{
     template:`
     <div>
     <h3>REGISTRAR PARTIDO</h3>
+    <h4>(Solo Administradores)</h4>
     <form v-on:submit.prevent="guardarPartido">
         <table>
             <tr>
@@ -38,11 +39,11 @@ app.component("registrar-partidos",{
                 <td><input type="text" v-model="evento"></td>
             </tr>
             <tr>
-                <td><label>Equipolocal</label></td>
+                <td><label>Equipo 1</label></td>
                 <td><input type="text" v-model="equipolocal"></td>
             </tr>
             <tr>
-                <td><label>Equipovisitante</label></td>
+                <td><label>Equipo 2</label></td>
                 <td><input type="text" v-model="equipovisitante"></td>
             </tr>
             <tr>
