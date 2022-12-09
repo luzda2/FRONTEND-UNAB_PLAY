@@ -1,14 +1,13 @@
 const app=Vue.createApp({
     data(){
         return{
-            id:"",
+            idPartido:"",
             categoria:"",
             evento:"",
             equipolocal:"",
             equipovisitante:"",
             marcador:"",
             partidos:[],
-            partido:{},
             categoriaBuscar:"",
             eventoBuscar:"",
             equipoBuscar:""
@@ -20,9 +19,9 @@ const app=Vue.createApp({
             const endpoint="http://localhost:8080/partido/guardar";
             const opciones={
                 method:"POST",
-                Headers:{'Content-Type':'application/json'},
+                headers:{'Content-Type':'application/json'},
                 body:JSON.stringify({
-                    id:this.id,
+                    idPartido:this.idPartido,
                     categoria:this.categoria,
                     evento:this.evento,
                     equipolocal:this.equipolocal,
@@ -41,7 +40,7 @@ const app=Vue.createApp({
             })
 
         
-            this.id="";
+            this.idPartido="";
             this.categoria="",
             this.evento="",
             this.equipolocal="",
