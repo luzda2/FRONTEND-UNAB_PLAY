@@ -58,7 +58,7 @@ app.component("registrar-partidos",{
 
     methods:{
         guardarPartido(){
-            const endpoint="http://localhost:8080/partido/guardar";
+            const endpoint="https://unabplay-production-e39d.up.railway.app/partido/guardar";
             const opciones={
                 method:"POST",
                 headers:{'Content-Type':'application/json'},
@@ -144,7 +144,7 @@ app.component("ver-partidos",{
     methods:{
 
         verPartidos(){
-            const endpoint="http://localhost:8080/partido/consultar";
+            const endpoint="https://unabplay-production-e39d.up.railway.app/partido/consultar";
             const opciones={method:"GET"}
     
             fetch(endpoint,opciones).then(async Response=>{
@@ -154,7 +154,7 @@ app.component("ver-partidos",{
         },
     
         buscarxcategoria(){
-            const endpoint="http://localhost:8080/partido/buscarpartidoxcategoria/"+this.categoriaBuscar;
+            const endpoint="https://unabplay-production-e39d.up.railway.app/partido/buscarpartidoxcategoria/"+this.categoriaBuscar;
             const opciones={method:"GET"};
     
             fetch(endpoint,opciones).then(async Response=>{
@@ -163,7 +163,7 @@ app.component("ver-partidos",{
         },
     
         buscarxevento(){
-            const endpoint="http://localhost:8080/partido/buscarpartidoxevento/"+this.eventoBuscar;
+            const endpoint="https://unabplay-production-e39d.up.railway.app/partido/buscarpartidoxevento/"+this.eventoBuscar;
             const opciones={method:"GET"};
     
             fetch(endpoint,opciones).then(async Response=>{
@@ -172,7 +172,7 @@ app.component("ver-partidos",{
         },
     
         buscarxequipo(){
-            const endpoint="http://localhost:8080/partido/buscarpartidoxequipo/"+this.equipoBuscar;
+            const endpoint="https://unabplay-production-e39d.up.railway.app/partido/buscarpartidoxequipo/"+this.equipoBuscar;
             const opciones={method:"GET"};
     
             fetch(endpoint,opciones).then(async Response=>{
